@@ -11,6 +11,16 @@
 		EC77C4772D68BC1200890FA4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC77C4762D68BC1200890FA4 /* ContentView.swift */; };
 		EC77C4792D68BC1400890FA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC77C4782D68BC1400890FA4 /* Assets.xcassets */; };
 		EC77C47C2D68BC1400890FA4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC77C47B2D68BC1400890FA4 /* Preview Assets.xcassets */; };
+		EC77C4832D68BC4D00890FA4 /* LoginStepperOneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC77C4822D68BC4D00890FA4 /* LoginStepperOneView.swift */; };
+		EC77C4852D68C9D400890FA4 /* LogginStepperTwoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC77C4842D68C9D400890FA4 /* LogginStepperTwoView.swift */; };
+		EC77C4872D68E57600890FA4 /* PlanComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC77C4862D68E57600890FA4 /* PlanComponentView.swift */; };
+		EC77C4892D68E91300890FA4 /* TriangleShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC77C4882D68E91300890FA4 /* TriangleShape.swift */; };
+		EC77C48D2D6E462800890FA4 /* PlanPriceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC77C48C2D6E462800890FA4 /* PlanPriceView.swift */; };
+		EC77C48F2D6E478C00890FA4 /* PlanOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC77C48E2D6E478C00890FA4 /* PlanOption.swift */; };
+		EC77C4922D6F91D700890FA4 /* TermsTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC77C4912D6F91D700890FA4 /* TermsTextView.swift */; };
+		EC77C4952D7129CE00890FA4 /* StringConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC77C4942D7129CE00890FA4 /* StringConstants.swift */; };
+		EC77C4982D71389300890FA4 /* RoundedButtonComp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC77C4972D71389300890FA4 /* RoundedButtonComp.swift */; };
+		EC77C49B2D713B4100890FA4 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC77C49A2D713B4100890FA4 /* ColorExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +29,16 @@
 		EC77C4762D68BC1200890FA4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EC77C4782D68BC1400890FA4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC77C47B2D68BC1400890FA4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EC77C4822D68BC4D00890FA4 /* LoginStepperOneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginStepperOneView.swift; sourceTree = "<group>"; };
+		EC77C4842D68C9D400890FA4 /* LogginStepperTwoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogginStepperTwoView.swift; sourceTree = "<group>"; };
+		EC77C4862D68E57600890FA4 /* PlanComponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanComponentView.swift; sourceTree = "<group>"; };
+		EC77C4882D68E91300890FA4 /* TriangleShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriangleShape.swift; sourceTree = "<group>"; };
+		EC77C48C2D6E462800890FA4 /* PlanPriceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanPriceView.swift; sourceTree = "<group>"; };
+		EC77C48E2D6E478C00890FA4 /* PlanOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanOption.swift; sourceTree = "<group>"; };
+		EC77C4912D6F91D700890FA4 /* TermsTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsTextView.swift; sourceTree = "<group>"; };
+		EC77C4942D7129CE00890FA4 /* StringConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringConstants.swift; sourceTree = "<group>"; };
+		EC77C4972D71389300890FA4 /* RoundedButtonComp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButtonComp.swift; sourceTree = "<group>"; };
+		EC77C49A2D713B4100890FA4 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +71,18 @@
 		EC77C4732D68BC1200890FA4 /* movy */ = {
 			isa = PBXGroup;
 			children = (
+				EC77C4992D713B2700890FA4 /* utility */,
+				EC77C4962D71388300890FA4 /* components */,
+				EC77C4932D7129B900890FA4 /* constants */,
+				EC77C48C2D6E462800890FA4 /* PlanPriceView.swift */,
+				EC77C4882D68E91300890FA4 /* TriangleShape.swift */,
+				EC77C4862D68E57600890FA4 /* PlanComponentView.swift */,
+				EC77C4842D68C9D400890FA4 /* LogginStepperTwoView.swift */,
+				EC77C4822D68BC4D00890FA4 /* LoginStepperOneView.swift */,
 				EC77C4742D68BC1200890FA4 /* movyApp.swift */,
 				EC77C4762D68BC1200890FA4 /* ContentView.swift */,
+				EC77C4912D6F91D700890FA4 /* TermsTextView.swift */,
+				EC77C48E2D6E478C00890FA4 /* PlanOption.swift */,
 				EC77C4782D68BC1400890FA4 /* Assets.xcassets */,
 				EC77C47A2D68BC1400890FA4 /* Preview Content */,
 			);
@@ -65,6 +95,30 @@
 				EC77C47B2D68BC1400890FA4 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EC77C4932D7129B900890FA4 /* constants */ = {
+			isa = PBXGroup;
+			children = (
+				EC77C4942D7129CE00890FA4 /* StringConstants.swift */,
+			);
+			path = constants;
+			sourceTree = "<group>";
+		};
+		EC77C4962D71388300890FA4 /* components */ = {
+			isa = PBXGroup;
+			children = (
+				EC77C4972D71389300890FA4 /* RoundedButtonComp.swift */,
+			);
+			path = components;
+			sourceTree = "<group>";
+		};
+		EC77C4992D713B2700890FA4 /* utility */ = {
+			isa = PBXGroup;
+			children = (
+				EC77C49A2D713B4100890FA4 /* ColorExtension.swift */,
+			);
+			path = utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +191,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC77C4832D68BC4D00890FA4 /* LoginStepperOneView.swift in Sources */,
+				EC77C4852D68C9D400890FA4 /* LogginStepperTwoView.swift in Sources */,
+				EC77C4872D68E57600890FA4 /* PlanComponentView.swift in Sources */,
+				EC77C49B2D713B4100890FA4 /* ColorExtension.swift in Sources */,
+				EC77C48F2D6E478C00890FA4 /* PlanOption.swift in Sources */,
 				EC77C4772D68BC1200890FA4 /* ContentView.swift in Sources */,
+				EC77C48D2D6E462800890FA4 /* PlanPriceView.swift in Sources */,
 				EC77C4752D68BC1200890FA4 /* movyApp.swift in Sources */,
+				EC77C4922D6F91D700890FA4 /* TermsTextView.swift in Sources */,
+				EC77C4952D7129CE00890FA4 /* StringConstants.swift in Sources */,
+				EC77C4982D71389300890FA4 /* RoundedButtonComp.swift in Sources */,
+				EC77C4892D68E91300890FA4 /* TriangleShape.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
