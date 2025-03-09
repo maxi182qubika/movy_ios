@@ -1,0 +1,13 @@
+Carthage/*
+Pods/*
+DerivedData/*
+logs/*
+Reports/*
+Build/*
+BuildTools/*
+Podfile.lock
+movy.xcodeproj/project.xcworkspace/xcuserdata/
+xcuserdata/
+Vendor/*
+.idea/*
+.DS_Store

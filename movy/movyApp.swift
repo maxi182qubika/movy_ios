@@ -7,11 +7,25 @@
 
 import SwiftUI
 
+
+
 @main
 struct movyApp: App {
+    @StateObject private var entryCoordinator = AppEntryCoordinator()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            if AuthManager.shared.isAuthenticated {
+                MovyTabView()
+            } else {
+                entryCoordinator.build()
+                    .sheet(item: $entryCoordinator.sheet) { sheet in
+                        entryCoordinator.buildSheet(sheet: sheet)
+                    }
+                    .fullScreenCover(item: $entryCoordinator.fullScreenCover) { item in
+                        entryCoordinator.buildCover(cover: item)
+                    }
+            }
         }
     }
 }
