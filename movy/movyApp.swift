@@ -15,17 +15,13 @@ struct movyApp: App {
     
     var body: some Scene {
         WindowGroup {
-            if AuthManager.shared.isAuthenticated {
-                MovyTabView()
-            } else {
-                entryCoordinator.build()
-                    .sheet(item: $entryCoordinator.sheet) { sheet in
-                        entryCoordinator.buildSheet(sheet: sheet)
-                    }
-                    .fullScreenCover(item: $entryCoordinator.fullScreenCover) { item in
-                        entryCoordinator.buildCover(cover: item)
-                    }
-            }
+            entryCoordinator.build()
+                .sheet(item: $entryCoordinator.sheet) { sheet in
+                    entryCoordinator.buildSheet(sheet: sheet)
+                }
+                .fullScreenCover(item: $entryCoordinator.fullScreenCover) { item in
+                    entryCoordinator.buildCover(cover: item)
+                }
         }
     }
 }

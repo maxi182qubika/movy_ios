@@ -41,21 +41,25 @@ class AppEntryCoordinator: ObservableObject {
     
     @ViewBuilder
     func build() -> some View {
-        switch currentPage {
-        case .login:
-            LoginView(
-                onBack: { [weak self] in
-                    self?.replaceWith(page: .onboarding)
-                }
-            )
-        case .onboarding:
-            OnboardingView(
-                coordinator: .init(
-                    showLogin: { [weak self] in
-                        self?.replaceWith(page: .login)
+        if AuthManager.shared.isAuthenticated {
+            MovyTabView()
+        } else {
+            switch currentPage {
+            case .login:
+                LoginView(
+                    onBack: { [weak self] in
+                        self?.replaceWith(page: .onboarding)
                     }
                 )
-            )
+            case .onboarding:
+                OnboardingView(
+                    coordinator: .init(
+                        showLogin: { [weak self] in
+                            self?.replaceWith(page: .login)
+                        }
+                    )
+                )
+            }
         }
     }
     

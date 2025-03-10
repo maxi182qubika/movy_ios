@@ -154,6 +154,7 @@
 		30095EDB2D7E33A400A2DB10 /* StepTwo */ = {
 			isa = PBXGroup;
 			children = (
+				30095F1D2D7E568D00A2DB10 /* Components */,
 				30095EFB2D7E3D8B00A2DB10 /* ViewModels */,
 				EC77C4842D68C9D400890FA4 /* OnboardingStepTwoView.swift */,
 			);
@@ -314,6 +315,16 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		30095F1D2D7E568D00A2DB10 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				EC77C4912D6F91D700890FA4 /* TermsTextView.swift */,
+				EC77C48C2D6E462800890FA4 /* PlanPriceView.swift */,
+				EC77C4862D68E57600890FA4 /* PlanComponentView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		EC77C4682D68BC1200890FA4 = {
 			isa = PBXGroup;
 			children = (
@@ -333,7 +344,6 @@
 		EC77C4732D68BC1200890FA4 /* movy */ = {
 			isa = PBXGroup;
 			children = (
-				30095F0E2D7E472600A2DB10 /* AppEntryCoordinator.swift */,
 				30095ED62D7E2FC800A2DB10 /* Models */,
 				30095ED52D7E2FC400A2DB10 /* Resources */,
 				30095ED42D7E2FAC00A2DB10 /* Components */,
@@ -341,10 +351,8 @@
 				EC77C4992D713B2700890FA4 /* Utilities */,
 				EC77C4932D7129B900890FA4 /* Constants */,
 				30095F102D7E484800A2DB10 /* Services */,
-				EC77C48C2D6E462800890FA4 /* PlanPriceView.swift */,
-				EC77C4862D68E57600890FA4 /* PlanComponentView.swift */,
 				EC77C4742D68BC1200890FA4 /* movyApp.swift */,
-				EC77C4912D6F91D700890FA4 /* TermsTextView.swift */,
+				30095F0E2D7E472600A2DB10 /* AppEntryCoordinator.swift */,
 				EC77C4782D68BC1400890FA4 /* Assets.xcassets */,
 				EC77C47A2D68BC1400890FA4 /* Preview Content */,
 			);
