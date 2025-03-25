@@ -42,6 +42,11 @@
 		EC77C4952D7129CE00890FA4 /* StringConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC77C4942D7129CE00890FA4 /* StringConstants.swift */; };
 		EC77C4982D71389300890FA4 /* RoundedButtonComp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC77C4972D71389300890FA4 /* RoundedButtonComp.swift */; };
 		EC77C49B2D713B4100890FA4 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC77C49A2D713B4100890FA4 /* ColorExtension.swift */; };
+		EC77C49D2D8F414300890FA4 /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC77C49C2D8F414300890FA4 /* RoundedTextField.swift */; };
+		EC77C49F2D91A2D100890FA4 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC77C49E2D91A2D100890FA4 /* LoginCoordinator.swift */; };
+		EC77C4A22D91E2F500890FA4 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC77C4A12D91E2F500890FA4 /* SignupView.swift */; };
+		EC77C4A52D91E31600890FA4 /* SignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC77C4A42D91E31600890FA4 /* SignupViewModel.swift */; };
+		EC77C4A72D93196C00890FA4 /* ValidationUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC77C4A62D93196C00890FA4 /* ValidationUtils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -81,6 +86,11 @@
 		EC77C4942D7129CE00890FA4 /* StringConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringConstants.swift; sourceTree = "<group>"; };
 		EC77C4972D71389300890FA4 /* RoundedButtonComp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButtonComp.swift; sourceTree = "<group>"; };
 		EC77C49A2D713B4100890FA4 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		EC77C49C2D8F414300890FA4 /* RoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
+		EC77C49E2D91A2D100890FA4 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
+		EC77C4A12D91E2F500890FA4 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
+		EC77C4A42D91E31600890FA4 /* SignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewModel.swift; sourceTree = "<group>"; };
+		EC77C4A62D93196C00890FA4 /* ValidationUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationUtils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -241,6 +251,7 @@
 			isa = PBXGroup;
 			children = (
 				30095EF72D7E3A7A00A2DB10 /* CheckmarkText.swift */,
+				EC77C49C2D8F414300890FA4 /* RoundedTextField.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -258,6 +269,7 @@
 			children = (
 				30095F062D7E44BB00A2DB10 /* LoginView.swift */,
 				30095F012D7E448300A2DB10 /* ViewModels */,
+				EC77C49E2D91A2D100890FA4 /* LoginCoordinator.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -305,6 +317,7 @@
 		30095F142D7E489C00A2DB10 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				EC77C4A02D91E2CF00890FA4 /* signup */,
 				30095EDF2D7E33EB00A2DB10 /* StepSixth */,
 				30095EDE2D7E33D700A2DB10 /* StepFifth */,
 				30095EDD2D7E33D100A2DB10 /* StepFourth */,
@@ -380,8 +393,26 @@
 			children = (
 				EC77C49A2D713B4100890FA4 /* ColorExtension.swift */,
 				EC77C4882D68E91300890FA4 /* TriangleShape.swift */,
+				EC77C4A62D93196C00890FA4 /* ValidationUtils.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		EC77C4A02D91E2CF00890FA4 /* signup */ = {
+			isa = PBXGroup;
+			children = (
+				EC77C4A32D91E2FC00890FA4 /* viewModels */,
+				EC77C4A12D91E2F500890FA4 /* SignupView.swift */,
+			);
+			path = signup;
+			sourceTree = "<group>";
+		};
+		EC77C4A32D91E2FC00890FA4 /* viewModels */ = {
+			isa = PBXGroup;
+			children = (
+				EC77C4A42D91E31600890FA4 /* SignupViewModel.swift */,
+			);
+			path = viewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -454,7 +485,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC77C4A22D91E2F500890FA4 /* SignupView.swift in Sources */,
 				30095EFD2D7E3D9400A2DB10 /* OnboardingStepTwoViewModel.swift in Sources */,
+				EC77C49D2D8F414300890FA4 /* RoundedTextField.swift in Sources */,
+				EC77C49F2D91A2D100890FA4 /* LoginCoordinator.swift in Sources */,
 				30095F1A2D7E4AD700A2DB10 /* PlanAttributes.swift in Sources */,
 				EC77C4832D68BC4D00890FA4 /* OnboardingStepOneView.swift in Sources */,
 				30095F122D7E485000A2DB10 /* AuthManager.swift in Sources */,
@@ -473,6 +507,7 @@
 				30095EE92D7E343B00A2DB10 /* OnboardingStepSixthViewModel.swift in Sources */,
 				EC77C49B2D713B4100890FA4 /* ColorExtension.swift in Sources */,
 				EC77C48F2D6E478C00890FA4 /* PlanOption.swift in Sources */,
+				EC77C4A72D93196C00890FA4 /* ValidationUtils.swift in Sources */,
 				30095F032D7E448C00A2DB10 /* LoginViewModel.swift in Sources */,
 				30095F0F2D7E472900A2DB10 /* AppEntryCoordinator.swift in Sources */,
 				30095EFA2D7E3C8D00A2DB10 /* OnboardingCoordinator.swift in Sources */,
@@ -480,6 +515,7 @@
 				30095EEC2D7E34CA00A2DB10 /* OnboardingStepFifthViewModel.swift in Sources */,
 				EC77C48D2D6E462800890FA4 /* PlanPriceView.swift in Sources */,
 				EC77C4752D68BC1200890FA4 /* movyApp.swift in Sources */,
+				EC77C4A52D91E31600890FA4 /* SignupViewModel.swift in Sources */,
 				EC77C4922D6F91D700890FA4 /* TermsTextView.swift in Sources */,
 				30095EEF2D7E380A00A2DB10 /* OnboardingStepFourthViewModel.swift in Sources */,
 				EC77C4952D7129CE00890FA4 /* StringConstants.swift in Sources */,

@@ -47,6 +47,7 @@ class AppEntryCoordinator: ObservableObject {
             switch currentPage {
             case .login:
                 LoginView(
+                    viewModel: LoginViewModel(coordinator: LoginCoordinator.init()), // usar logincordinator
                     onBack: { [weak self] in
                         self?.replaceWith(page: .onboarding)
                     }
