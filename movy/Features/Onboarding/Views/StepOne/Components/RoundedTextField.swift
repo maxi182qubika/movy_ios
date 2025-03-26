@@ -30,7 +30,7 @@ struct RoundedTextField: View {
          }
          .padding(12)
          .background(RoundedRectangle(cornerRadius: 4).stroke(Color.gray, lineWidth: 1))
-         .padding(.horizontal, 16)
+         .padding(.horizontal, 8)
      }
   
 }
