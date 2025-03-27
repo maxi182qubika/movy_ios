@@ -47,6 +47,16 @@
 		EC77C4A22D91E2F500890FA4 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC77C4A12D91E2F500890FA4 /* SignupView.swift */; };
 		EC77C4A52D91E31600890FA4 /* SignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC77C4A42D91E31600890FA4 /* SignupViewModel.swift */; };
 		EC77C4A72D93196C00890FA4 /* ValidationUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC77C4A62D93196C00890FA4 /* ValidationUtils.swift */; };
+		EC77C4AB2D94710D00890FA4 /* TabsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC77C4AA2D94710D00890FA4 /* TabsCoordinator.swift */; };
+		EC77C4AD2D94783700890FA4 /* HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC77C4AC2D94783700890FA4 /* HomeScreenView.swift */; };
+		EC77C4AF2D94786D00890FA4 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC77C4AE2D94786D00890FA4 /* HomeViewModel.swift */; };
+		EC77C4B12D947E2100890FA4 /* SearchScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC77C4B02D947E2100890FA4 /* SearchScreenView.swift */; };
+		EC77C4B32D947E5500890FA4 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC77C4B22D947E5500890FA4 /* SearchViewModel.swift */; };
+		EC77C4B52D94811E00890FA4 /* ListScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC77C4B42D94811E00890FA4 /* ListScreenView.swift */; };
+		EC77C4B72D94814E00890FA4 /* ListScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC77C4B62D94814E00890FA4 /* ListScreenViewModel.swift */; };
+		EC77C4B92D94841A00890FA4 /* IconTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC77C4B82D94841A00890FA4 /* IconTextView.swift */; };
+		EC77C4BB2D94D4B300890FA4 /* ProfileScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC77C4BA2D94D4B200890FA4 /* ProfileScreenView.swift */; };
+		EC77C4BD2D94D4C800890FA4 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC77C4BC2D94D4C800890FA4 /* ProfileViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -91,6 +101,16 @@
 		EC77C4A12D91E2F500890FA4 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
 		EC77C4A42D91E31600890FA4 /* SignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewModel.swift; sourceTree = "<group>"; };
 		EC77C4A62D93196C00890FA4 /* ValidationUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationUtils.swift; sourceTree = "<group>"; };
+		EC77C4AA2D94710D00890FA4 /* TabsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabsCoordinator.swift; sourceTree = "<group>"; };
+		EC77C4AC2D94783700890FA4 /* HomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenView.swift; sourceTree = "<group>"; };
+		EC77C4AE2D94786D00890FA4 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeViewModel.swift; path = movy/Features/Tab/HomeViewModel.swift; sourceTree = SOURCE_ROOT; };
+		EC77C4B02D947E2100890FA4 /* SearchScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreenView.swift; sourceTree = "<group>"; };
+		EC77C4B22D947E5500890FA4 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SearchViewModel.swift; path = movy/Features/Tab/SearchViewModel.swift; sourceTree = SOURCE_ROOT; };
+		EC77C4B42D94811E00890FA4 /* ListScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListScreenView.swift; sourceTree = "<group>"; };
+		EC77C4B62D94814E00890FA4 /* ListScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ListScreenViewModel.swift; path = movy/Features/Tab/ListScreenViewModel.swift; sourceTree = SOURCE_ROOT; };
+		EC77C4B82D94841A00890FA4 /* IconTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconTextView.swift; sourceTree = "<group>"; };
+		EC77C4BA2D94D4B200890FA4 /* ProfileScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScreenView.swift; sourceTree = "<group>"; };
+		EC77C4BC2D94D4C800890FA4 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileViewModel.swift; path = movy/Features/Tab/ProfileViewModel.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +130,7 @@
 				30095F082D7E467000A2DB10 /* Tab */,
 				30095F002D7E447900A2DB10 /* Login */,
 				30095ED32D7E2CEF00A2DB10 /* Onboarding */,
+				EC77C4AA2D94710D00890FA4 /* TabsCoordinator.swift */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -287,6 +308,10 @@
 			children = (
 				30095F0B2D7E46B400A2DB10 /* ViewModels */,
 				30095F092D7E469100A2DB10 /* TabView.swift */,
+				EC77C4AC2D94783700890FA4 /* HomeScreenView.swift */,
+				EC77C4B02D947E2100890FA4 /* SearchScreenView.swift */,
+				EC77C4B42D94811E00890FA4 /* ListScreenView.swift */,
+				EC77C4BA2D94D4B200890FA4 /* ProfileScreenView.swift */,
 			);
 			path = Tab;
 			sourceTree = "<group>";
@@ -294,6 +319,10 @@
 		30095F0B2D7E46B400A2DB10 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				EC77C4AE2D94786D00890FA4 /* HomeViewModel.swift */,
+				EC77C4B22D947E5500890FA4 /* SearchViewModel.swift */,
+				EC77C4B62D94814E00890FA4 /* ListScreenViewModel.swift */,
+				EC77C4BC2D94D4C800890FA4 /* ProfileViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -334,6 +363,7 @@
 				EC77C4912D6F91D700890FA4 /* TermsTextView.swift */,
 				EC77C48C2D6E462800890FA4 /* PlanPriceView.swift */,
 				EC77C4862D68E57600890FA4 /* PlanComponentView.swift */,
+				EC77C4B82D94841A00890FA4 /* IconTextView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -494,25 +524,34 @@
 				30095F122D7E485000A2DB10 /* AuthManager.swift in Sources */,
 				EC77C4852D68C9D400890FA4 /* OnboardingStepTwoView.swift in Sources */,
 				30095EE32D7E340900A2DB10 /* OnboardingStepFifthView.swift in Sources */,
+				EC77C4B52D94811E00890FA4 /* ListScreenView.swift in Sources */,
 				30095EE62D7E341B00A2DB10 /* OnboardingStepSixthView.swift in Sources */,
 				30095F182D7E4AC200A2DB10 /* PlanFeature.swift in Sources */,
 				30095EF82D7E3A8300A2DB10 /* CheckmarkText.swift in Sources */,
 				30095F162D7E48AA00A2DB10 /* OnboardingHeader.swift in Sources */,
 				30095EFF2D7E402500A2DB10 /* OnboardingView.swift in Sources */,
 				30095EF22D7E390F00A2DB10 /* OnboardingStepOneViewModel.swift in Sources */,
+				EC77C4AB2D94710D00890FA4 /* TabsCoordinator.swift in Sources */,
 				30095ED82D7E332800A2DB10 /* OnboardingStepThirdView.swift in Sources */,
+				EC77C4B12D947E2100890FA4 /* SearchScreenView.swift in Sources */,
 				30095F1C2D7E4AEC00A2DB10 /* PlanType.swift in Sources */,
 				EC77C4872D68E57600890FA4 /* PlanComponentView.swift in Sources */,
 				30095F072D7E44BE00A2DB10 /* LoginView.swift in Sources */,
 				30095EE92D7E343B00A2DB10 /* OnboardingStepSixthViewModel.swift in Sources */,
 				EC77C49B2D713B4100890FA4 /* ColorExtension.swift in Sources */,
+				EC77C4AF2D94786D00890FA4 /* HomeViewModel.swift in Sources */,
 				EC77C48F2D6E478C00890FA4 /* PlanOption.swift in Sources */,
 				EC77C4A72D93196C00890FA4 /* ValidationUtils.swift in Sources */,
 				30095F032D7E448C00A2DB10 /* LoginViewModel.swift in Sources */,
+				EC77C4B92D94841A00890FA4 /* IconTextView.swift in Sources */,
 				30095F0F2D7E472900A2DB10 /* AppEntryCoordinator.swift in Sources */,
+				EC77C4BD2D94D4C800890FA4 /* ProfileViewModel.swift in Sources */,
 				30095EFA2D7E3C8D00A2DB10 /* OnboardingCoordinator.swift in Sources */,
+				EC77C4BB2D94D4B300890FA4 /* ProfileScreenView.swift in Sources */,
 				30095EE12D7E33FC00A2DB10 /* OnboardingStepFourthView.swift in Sources */,
 				30095EEC2D7E34CA00A2DB10 /* OnboardingStepFifthViewModel.swift in Sources */,
+				EC77C4B72D94814E00890FA4 /* ListScreenViewModel.swift in Sources */,
+				EC77C4B32D947E5500890FA4 /* SearchViewModel.swift in Sources */,
 				EC77C48D2D6E462800890FA4 /* PlanPriceView.swift in Sources */,
 				EC77C4752D68BC1200890FA4 /* movyApp.swift in Sources */,
 				EC77C4A52D91E31600890FA4 /* SignupViewModel.swift in Sources */,
@@ -520,6 +559,7 @@
 				30095EEF2D7E380A00A2DB10 /* OnboardingStepFourthViewModel.swift in Sources */,
 				EC77C4952D7129CE00890FA4 /* StringConstants.swift in Sources */,
 				EC77C4982D71389300890FA4 /* RoundedButtonComp.swift in Sources */,
+				EC77C4AD2D94783700890FA4 /* HomeScreenView.swift in Sources */,
 				30095EF52D7E3A2400A2DB10 /* OnboardingStepThirdViewModel.swift in Sources */,
 				30095F0A2D7E469900A2DB10 /* TabView.swift in Sources */,
 				EC77C4892D68E91300890FA4 /* TriangleShape.swift in Sources */,
