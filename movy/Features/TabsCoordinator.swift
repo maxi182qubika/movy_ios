@@ -22,23 +22,6 @@ class TabsCoordinator: ObservableObject {
     self.listCoordinator = CommonCoordinator(screenType: .list)
     self.profileCoordinator = CommonCoordinator(screenType: .profile)
   }
-  
-  func viewForCurrentTab() -> some View {
-    switch currentTab {
-    case .home:
-      homeCoordinator.build()
-        .tabItem { Label("Home", systemImage: "house") }
-    case .search:
-      searchCoordinator.build()
-        .tabItem { Label("Search", systemImage: "magnifyingglass") }
-    case .list:
-      listCoordinator.build()
-        .tabItem { Label("Search", systemImage: "magnifyingglass") }
-    case .profile:
-      profileCoordinator.build()
-        .tabItem { Label("Search", systemImage: "magnifyingglass") }
-    }
-  }
 }
 
 // MARK: - CommonCoordinator
