@@ -82,5 +82,5 @@ struct HomeScreenView: View {
 }
 
 #Preview {
-    HomeScreenView(viewModel: HomeViewModel(coordinator: TabsCoordinator()))
+    HomeScreenView(viewModel: HomeViewModel())
 }

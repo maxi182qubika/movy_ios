@@ -12,9 +12,10 @@ class LoginViewModel: ObservableObject {
       @Published var loginError: String?
 
     private let authManager = AuthManager.shared
+    let onBack: () -> Void
 
-    init(coordinator: LoginCoordinator) {
-        self.coordinator = coordinator
+    init(onBack: @escaping () -> Void) {
+        self.onBack = onBack
     }
     
     private func validateEmail() {
@@ -36,25 +37,11 @@ class LoginViewModel: ObservableObject {
              }
         
         authManager.login()
-        coordinator.push(page: .signUp)
     }
-    
-    
-    func continueToNextStep() {
-        coordinator.push(page: .signUp)
-    }
-    
-    func showSignup() {
-        coordinator.showSignup()
-    }
-    
-    // MARK: Private
-    
-    private var coordinator: LoginCoordinator
     
     // MARK: Static
     
     static func mock() -> LoginViewModel {
-        LoginViewModel(coordinator: .init())
+      LoginViewModel {}
     }
 }

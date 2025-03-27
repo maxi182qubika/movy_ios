@@ -1,51 +1,94 @@
-//
-//  TabsCoordinator.swift
-//  movy
-//
-//  Created by Maximiliano Ferraiuolo on 26/03/2025.
-//
-
 import Foundation
 import SwiftUI
 
 // MARK: - TabsCoordinator
+
 class TabsCoordinator: ObservableObject {
-    
-    enum Tabs: Hashable {
-        case tab1
-        case tab2
-        case tab3
-        case tab4
+  
+  enum Tab: Hashable {
+    case home, search, list, profile
+  }
+  
+  @Published var currentTab: Tab = .home
+  
+  let homeCoordinator: CommonCoordinator // Replace with HomeCoordinator
+  let searchCoordinator: CommonCoordinator // Replace with SearchCoordinator
+  let listCoordinator: CommonCoordinator // Replace with ListCoordinator
+  let profileCoordinator: CommonCoordinator // Replace with ProfileCoordinator
+  
+  init() {
+    self.homeCoordinator = CommonCoordinator(screenType: .home)
+    self.searchCoordinator = CommonCoordinator(screenType: .search)
+    self.listCoordinator = CommonCoordinator(screenType: .list)
+    self.profileCoordinator = CommonCoordinator(screenType: .profile)
+  }
+  
+  func viewForCurrentTab() -> some View {
+    switch currentTab {
+    case .home:
+      homeCoordinator.build()
+        .tabItem { Label("Home", systemImage: "house") }
+    case .search:
+      searchCoordinator.build()
+        .tabItem { Label("Search", systemImage: "magnifyingglass") }
+    case .list:
+      listCoordinator.build()
+        .tabItem { Label("Search", systemImage: "magnifyingglass") }
+    case .profile:
+      profileCoordinator.build()
+        .tabItem { Label("Search", systemImage: "magnifyingglass") }
     }
-    
-    @Published var currentTab: Tabs = .tab1
-    
-    let tab1 = CommonCoordinator()
-    let tab2 = CommonCoordinator()
-    let tab3 = CommonCoordinator()
-    let tab4 = CommonCoordinator()
-    
-    func destination() -> some View {
-        MovyTabView(coordinator: self)
-    }
+  }
 }
 
-class CommonCoordinator: ObservableObject {
-    
-    enum Screen: Hashable {
-        case first
-        case second
-        case third
-        case fourth
-    }
-    
-    func view(for screen: Screen) -> some View {
-        switch screen {
-        case .first: return AnyView(HomeScreenView(viewModel: HomeViewModel(coordinator: TabsCoordinator())))
-        case .second: return AnyView(SearchScreenView(viewModel: SearchViewModel(coordinator: TabsCoordinator())))
-        case .third: return AnyView(ListScreenView(viewModel: ListScreenViewModel(coordinator: TabsCoordinator())))
-        case .fourth: return AnyView(ProfileScreenView(viewModel: ProfileViewModel(coordinator: TabsCoordinator())))
+// MARK: - CommonCoordinator
 
-        }
+
+// Este concepto esta mal, porque usariamos un coordinator "comun" a todos?
+// Cada vista deberia tener su propio coordinator si y solo si es necesario, meaning si tiene navegacion
+// - Si no tiene navegacion, no es necesario un coordinator
+// - Si tiene navegacion, el coordinator deberia ser unico para esa vista
+// Ademas de esto, si bien se llama "CommonCoordinator", esto de abajo no es un coordinator, es un switch case basado en screen type que devuelve una vista, no maneja nada de navegacion
+
+
+class CommonCoordinator: ObservableObject {
+  
+  enum ScreenType {
+    case home, search, list, profile
+  }
+  
+  private let screenType: ScreenType
+  
+  init(screenType: ScreenType) {
+    self.screenType = screenType
+  }
+  
+  func build() -> some View {
+    switch screenType {
+    case .home:
+      return AnyView(
+        HomeScreenView(
+          viewModel: HomeViewModel()
+        )
+      )
+    case .search:
+      return AnyView(
+        SearchScreenView(
+          viewModel: SearchViewModel()
+        )
+      )
+    case .list:
+      return AnyView(
+        ListScreenView(
+          viewModel: ListScreenViewModel()
+        )
+      )
+    case .profile:
+      return AnyView(
+        ProfileScreenView(
+          viewModel: ProfileViewModel()
+        )
+      )
     }
+  }
 }

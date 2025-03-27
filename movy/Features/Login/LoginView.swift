@@ -4,13 +4,10 @@ import SwiftUI
 
 struct LoginView: View {
     // TODO: Similar view to the sign up, let's add some email and password fields, and that's it, maybe some error validations
-
-    let onBack: () -> Void
     
-    init(viewModel: LoginViewModel, onBack: @escaping () -> Void) {
+    init(viewModel: LoginViewModel) {
             self.viewModel = viewModel
-            self.onBack = onBack
-        }
+    }
 
     var body: some View {
         VStack(alignment: .leading) {
@@ -39,7 +36,7 @@ struct LoginView: View {
 
  
             Button(action: {
-                viewModel.showSignup()
+                viewModel.onBack()
             }) {
                 Text("Create Account")
                     .font(.system(size: 14, weight: .regular))
@@ -56,9 +53,9 @@ struct LoginView: View {
                                
                         }
             
-            RoundedButtonComp(text: "Login", action: { viewModel.login() })
+            RoundedButtonComp(text: "Login", action: viewModel.login )
 
-            RoundedButtonComp(text: "Back", action: onBack)
+            RoundedButtonComp(text: "Back", action: viewModel.onBack)
             
          
         }.padding(.horizontal)
@@ -67,7 +64,7 @@ struct LoginView: View {
     @ObservedObject private var viewModel: LoginViewModel
     
     static func mock() -> Self {
-          .init(viewModel: .mock(), onBack: {})
+          .init(viewModel: .mock())
       }
 }
 

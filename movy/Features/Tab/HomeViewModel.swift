@@ -12,21 +12,16 @@ class HomeViewModel: ObservableObject {
     
     // MARK: Public
     
-    init(coordinator: TabsCoordinator) {
-        self.coordinator = coordinator
+    init() {
     }
     
-    func continueToNextStep() {
-        // TODO: Coordinator finish onboarding
-    }
     
     // MARK: Private
     
-    private var coordinator: TabsCoordinator
     
     // MARK: Static
     
     static func mock() -> HomeViewModel {
-        HomeViewModel(coordinator: .init())
+        HomeViewModel()
     }
 }

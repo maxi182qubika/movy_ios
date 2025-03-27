@@ -11,21 +11,15 @@ class ListScreenViewModel: ObservableObject {
     
     // MARK: Public
     
-    init(coordinator: TabsCoordinator) {
-        self.coordinator = coordinator
-    }
-    
-    func continueToNextStep() {
-        // TODO: Coordinator finish onboarding
+    init() {
+      
     }
     
     // MARK: Private
-    
-    private var coordinator: TabsCoordinator
-    
+      
     // MARK: Static
     
     static func mock() -> ListScreenViewModel {
-        ListScreenViewModel(coordinator: .init())
+        ListScreenViewModel()
     }
 }
