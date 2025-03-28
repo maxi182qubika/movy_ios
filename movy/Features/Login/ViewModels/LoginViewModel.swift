@@ -31,7 +31,7 @@ class LoginViewModel: ObservableObject {
                 print("Login failed: Invalid email")
                 return
             }
-        guard username == "maxi@gmail.com" && password == "1234" else {
+        guard username == "" && password == "" else {
              loginError =  "Invalid username or password"
                  return
              }

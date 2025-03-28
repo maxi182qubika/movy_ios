@@ -14,25 +14,25 @@ struct MovyTabView: View {
   
   var body: some View {
     TabView(selection: $coordinator.currentTab) {
-      coordinator.homeCoordinator.build()
+        coordinator.homeCoordinator.build(page: .home)
         .tag(TabsCoordinator.Tab.home)
         .tabItem {
           Label("Home", systemImage: "house")
         }
       
-      coordinator.searchCoordinator.build()
+        coordinator.searchCoordinator.build(page: .home)
         .tag(TabsCoordinator.Tab.search)
         .tabItem {
           Label("Search", systemImage: "magnifyingglass")
         }
       
-      coordinator.listCoordinator.build()
+      coordinator.listCoordinator.build(page: .home)
         .tag(TabsCoordinator.Tab.list)
         .tabItem {
           Label("List", systemImage: "list.bullet")
         }
       
-      coordinator.profileCoordinator.build()
+      coordinator.profileCoordinator.build(page: .home)
         .tag(TabsCoordinator.Tab.profile)
         .tabItem {
           Label("Profile", systemImage: "person.crop.circle")

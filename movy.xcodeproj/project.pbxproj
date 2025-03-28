@@ -56,6 +56,8 @@
 		EC77C4B92D94841A00890FA4 /* IconTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC77C4B82D94841A00890FA4 /* IconTextView.swift */; };
 		EC77C4BB2D94D4B300890FA4 /* ProfileScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC77C4BA2D94D4B200890FA4 /* ProfileScreenView.swift */; };
 		EC77C4BD2D94D4C800890FA4 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC77C4BC2D94D4C800890FA4 /* ProfileViewModel.swift */; };
+		EC77C4C72D95D79700890FA4 /* InfoScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC77C4C62D95D79700890FA4 /* InfoScreenView.swift */; };
+		EC77C4CA2D95D7B400890FA4 /* InfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC77C4C92D95D7B400890FA4 /* InfoViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -109,6 +111,8 @@
 		EC77C4B82D94841A00890FA4 /* IconTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconTextView.swift; sourceTree = "<group>"; };
 		EC77C4BA2D94D4B200890FA4 /* ProfileScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScreenView.swift; sourceTree = "<group>"; };
 		EC77C4BC2D94D4C800890FA4 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileViewModel.swift; path = movy/Features/Tab/ProfileViewModel.swift; sourceTree = SOURCE_ROOT; };
+		EC77C4C62D95D79700890FA4 /* InfoScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoScreenView.swift; sourceTree = "<group>"; };
+		EC77C4C92D95D7B400890FA4 /* InfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +129,7 @@
 		30095ED22D7E2CE000A2DB10 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				EC77C4C52D95D77E00890FA4 /* home */,
 				30095F082D7E467000A2DB10 /* Tab */,
 				30095F002D7E447900A2DB10 /* Login */,
 				30095ED32D7E2CEF00A2DB10 /* Onboarding */,
@@ -442,6 +447,23 @@
 			path = viewModels;
 			sourceTree = "<group>";
 		};
+		EC77C4C52D95D77E00890FA4 /* home */ = {
+			isa = PBXGroup;
+			children = (
+				EC77C4C82D95D7A200890FA4 /* viewModels */,
+				EC77C4C62D95D79700890FA4 /* InfoScreenView.swift */,
+			);
+			path = home;
+			sourceTree = "<group>";
+		};
+		EC77C4C82D95D7A200890FA4 /* viewModels */ = {
+			isa = PBXGroup;
+			children = (
+				EC77C4C92D95D7B400890FA4 /* InfoViewModel.swift */,
+			);
+			path = viewModels;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -528,7 +550,9 @@
 				30095EFF2D7E402500A2DB10 /* OnboardingView.swift in Sources */,
 				30095EF22D7E390F00A2DB10 /* OnboardingStepOneViewModel.swift in Sources */,
 				EC77C4AB2D94710D00890FA4 /* TabsCoordinator.swift in Sources */,
+				EC77C4C72D95D79700890FA4 /* InfoScreenView.swift in Sources */,
 				30095ED82D7E332800A2DB10 /* OnboardingStepThirdView.swift in Sources */,
+				EC77C4CA2D95D7B400890FA4 /* InfoViewModel.swift in Sources */,
 				EC77C4B12D947E2100890FA4 /* SearchScreenView.swift in Sources */,
 				30095F1C2D7E4AEC00A2DB10 /* PlanType.swift in Sources */,
 				EC77C4872D68E57600890FA4 /* PlanComponentView.swift in Sources */,

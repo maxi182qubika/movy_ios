@@ -54,7 +54,11 @@ struct HomeScreenView: View {
                     HStack {
                         IconTextView(text: "My List", image: Image(systemName: "plus"))
                         IconTextView(text: "Play", image: Image(systemName: "play.circle"))
-                        IconTextView(text: "Info", image: Image(systemName: "info.circle"))
+                        Button(action: {
+                            viewModel.openInfo()
+                           }) {
+                               IconTextView(text: "Info", image: Image(systemName: "info.circle"))
+                           }
                     }
                     .frame(maxWidth: .infinity, alignment: .center)
                 }
@@ -63,8 +67,6 @@ struct HomeScreenView: View {
                 
             }
         }
-        
-        
         .background(Color.black)
         .ignoresSafeArea()
     }
@@ -82,5 +84,5 @@ struct HomeScreenView: View {
 }
 
 #Preview {
-    HomeScreenView(viewModel: HomeViewModel())
+    HomeScreenView(viewModel: HomeViewModel(coordinator: HomeCoordinator(screenType: .home)))
 }
