@@ -3,7 +3,9 @@
 import SwiftUI
 
 struct OnboardingStepThirdView: View {
-    // MARK: Public
+
+    @State private var devices = ["ic_mac", "ic_imac", "ic_ipad", "ic_iphone"]
+    @State private var text: String = ""
 
     init(viewModel: OnboardingStepThirdViewModel) {
         self.viewModel = viewModel
@@ -13,12 +15,22 @@ struct OnboardingStepThirdView: View {
         VStack(alignment: .leading, spacing: 20) {
             OnboardingHeader(action: viewModel.showLogin)
             Spacer()
+            
+            HStack {
+                ForEach(devices.indices, id: \.self) { index in
+                    Image(devices[index])
+                }
+            }
             Text(viewModel.title)
+            Text(StringConstants.Onboarding.StepThird.title)
+                .bold()
+            Text(StringConstants.Onboarding.StepThird.description)
+                .padding(.bottom, 60)
+            Spacer()
             RoundedButtonComp(
                 text: StringConstants.Onboarding.StepThird.btnContinue,
                 action: viewModel.continueToNextStep
             )
-            Spacer()
         }
         .padding(.horizontal)
     }

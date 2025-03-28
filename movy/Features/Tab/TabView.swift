@@ -2,9 +2,41 @@
 
 import SwiftUI
 
+
 struct MovyTabView: View {
-    // Create tab coordinator: https://medium.com/@ivkuznetsov/proper-navigation-in-swiftui-with-coordinators-ee33f52ebe98
-    var body: some View {
-        Text("TabView")
-    }
+  @ObservedObject var coordinator: TabsCoordinator
+  
+  init(coordinator: TabsCoordinator) {
+    self.coordinator = coordinator
+    UITabBar.appearance().backgroundColor = UIColor(Color.customTabBgColor)
+    UITabBar.appearance().unselectedItemTintColor = UIColor.white
+  }
+  
+  var body: some View {
+    TabView(selection: $coordinator.currentTab) {
+        coordinator.homeCoordinator.build(page: .home)
+        .tag(TabsCoordinator.Tab.home)
+        .tabItem {
+          Label("Home", systemImage: "house")
+        }
+      
+        coordinator.searchCoordinator.build(page: .home)
+        .tag(TabsCoordinator.Tab.search)
+        .tabItem {
+          Label("Search", systemImage: "magnifyingglass")
+        }
+      
+      coordinator.listCoordinator.build(page: .home)
+        .tag(TabsCoordinator.Tab.list)
+        .tabItem {
+          Label("List", systemImage: "list.bullet")
+        }
+      
+      coordinator.profileCoordinator.build(page: .home)
+        .tag(TabsCoordinator.Tab.profile)
+        .tabItem {
+          Label("Profile", systemImage: "person.crop.circle")
+        }
+    }.tint(Color.blue)
+  }
 }

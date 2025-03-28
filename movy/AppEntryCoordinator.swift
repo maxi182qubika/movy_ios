@@ -41,15 +41,14 @@ class AppEntryCoordinator: ObservableObject {
     
     @ViewBuilder
     func build() -> some View {
-        if AuthManager.shared.isAuthenticated {
-            MovyTabView()
-        } else {
             switch currentPage {
             case .login:
                 LoginView(
-                    onBack: { [weak self] in
-                        self?.replaceWith(page: .onboarding)
-                    }
+                    viewModel: LoginViewModel(
+                      onBack: { [weak self] in
+                          self?.replaceWith(page: .onboarding)
+                      }
+                    )
                 )
             case .onboarding:
                 OnboardingView(
@@ -61,7 +60,6 @@ class AppEntryCoordinator: ObservableObject {
                 )
             }
         }
-    }
     
     @ViewBuilder
     func buildSheet(sheet: EntrySheet) -> some View {

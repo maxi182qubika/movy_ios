@@ -6,10 +6,11 @@ class OnboardingStepThirdViewModel: ObservableObject {
     
     // MARK: Public
     
-    let title = "Step 3"
+    let title: String
 
-    init(coordinator: OnboardingCoordinator) {
+    init(coordinator: OnboardingCoordinator, page: OnboardingPage) {
         self.coordinator = coordinator
+        self.title = page.name
     }
     
     func continueToNextStep() {
@@ -28,6 +29,6 @@ class OnboardingStepThirdViewModel: ObservableObject {
     // MARK: Static
     
     static func mock() -> OnboardingStepThirdViewModel {
-        OnboardingStepThirdViewModel(coordinator: .init())
+        OnboardingStepThirdViewModel(coordinator: .init(), page: .step3)
     }
 }
