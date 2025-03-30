@@ -1,5 +1,5 @@
 //
-//  ProfileScreenView.swift
+//  File.swift
 //  movy
 //
 //  Created by Maximiliano Ferraiuolo on 26/03/2025.
@@ -8,10 +8,10 @@
 import SwiftUI
 
 
-struct ProfileScreenView: View {
+struct ListView: View {
     // MARK: Public
 
-    init(viewModel: ProfileViewModel) {
+    init(viewModel: ListViewModel) {
         self.viewModel = viewModel
     }
 
@@ -30,7 +30,7 @@ struct ProfileScreenView: View {
     
     // MARK: Private
     
-    @ObservedObject private var viewModel: ProfileViewModel
+    @ObservedObject private var viewModel: ListViewModel
     
     // MARK: Static
     

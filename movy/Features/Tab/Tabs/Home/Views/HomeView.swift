@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct HomeScreenView: View {
+struct HomeView: View {
     // MARK: Public
     
     init(viewModel: HomeViewModel) {
@@ -84,5 +84,5 @@ struct HomeScreenView: View {
 }
 
 #Preview {
-    HomeScreenView(viewModel: HomeViewModel(coordinator: HomeCoordinator(screenType: .home)))
+    HomeView(viewModel: HomeViewModel(coordinator: HomeCoordinator()))
 }

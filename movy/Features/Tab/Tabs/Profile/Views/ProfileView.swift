@@ -1,5 +1,5 @@
 //
-//  SearchScreen.swift
+//  ProfileScreenView.swift
 //  movy
 //
 //  Created by Maximiliano Ferraiuolo on 26/03/2025.
@@ -8,10 +8,10 @@
 import SwiftUI
 
 
-struct SearchScreenView: View {
+struct ProfileView: View {
     // MARK: Public
 
-    init(viewModel: SearchViewModel) {
+    init(viewModel: ProfileViewModel) {
         self.viewModel = viewModel
     }
 
@@ -30,7 +30,7 @@ struct SearchScreenView: View {
     
     // MARK: Private
     
-    @ObservedObject private var viewModel: SearchViewModel
+    @ObservedObject private var viewModel: ProfileViewModel
     
     // MARK: Static
     

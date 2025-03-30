@@ -1,5 +1,5 @@
 //
-//  File.swift
+//  SearchScreen.swift
 //  movy
 //
 //  Created by Maximiliano Ferraiuolo on 26/03/2025.
@@ -8,10 +8,10 @@
 import SwiftUI
 
 
-struct ListScreenView: View {
+struct SearchView: View {
     // MARK: Public
 
-    init(viewModel: ListScreenViewModel) {
+    init(viewModel: SearchViewModel) {
         self.viewModel = viewModel
     }
 
@@ -30,7 +30,7 @@ struct ListScreenView: View {
     
     // MARK: Private
     
-    @ObservedObject private var viewModel: ListScreenViewModel
+    @ObservedObject private var viewModel: SearchViewModel
     
     // MARK: Static
     
