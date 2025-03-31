@@ -5,22 +5,16 @@ import SwiftUI
 
 class TabsCoordinator: ObservableObject {
   
-  enum Tab: Hashable {
+  enum Tab: Hashable, CaseIterable {
     case home, search, list, profile
   }
   
   @Published var currentTab: Tab = .home
   
   let homeCoordinator: HomeCoordinator
-  let searchCoordinator: HomeCoordinator // Replace with SearchCoordinator
-  let listCoordinator: HomeCoordinator // Replace with ListCoordinator
-  let profileCoordinator: HomeCoordinator // Replace with ProfileCoordinator
   
   init() {
     self.homeCoordinator = HomeCoordinator()
-    self.searchCoordinator = HomeCoordinator()
-    self.listCoordinator = HomeCoordinator()
-    self.profileCoordinator = HomeCoordinator()
   }
     
     func view(for tab: Tab) -> some View {
@@ -65,7 +59,6 @@ class HomeCoordinator: ObservableObject {
     init(
          path: NavigationPath = .init()
     ) {
-     
         self.path = path
     }
     

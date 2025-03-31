@@ -10,18 +10,23 @@ import SwiftUI
 class HomeViewModel: ObservableObject {
 
     // MARK: Public
+    @Published var movies: [Movie] = []
 
  
     init(coordinator: HomeCoordinator) {
         self.coordinator = coordinator
+        loadMovies() 
     }
 
     func openInfo() {
         coordinator.push(page: .info)
     }
+    
+    func loadMovies() {
+        movies = Movie.MoviesMocked()
+    }
 
     // MARK: Private
-
 
     private var coordinator: HomeCoordinator
 
