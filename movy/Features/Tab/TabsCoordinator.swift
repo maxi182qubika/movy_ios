@@ -48,8 +48,9 @@ class TabsCoordinator: ObservableObject {
 }
 
 class HomeCoordinator: ObservableObject {
-    
-    @Published var path: NavigationPath
+    @Published var currentPage: HomePage = .home
+
+    @Published var path: NavigationPath = NavigationPath()
  
     enum HomePage {
         case home
@@ -64,17 +65,23 @@ class HomeCoordinator: ObservableObject {
     
     @ViewBuilder
     func build(page: HomePage) -> some View {
-        switch page {
-        case .home:
-            HomeView(viewModel: .init(coordinator: self))
-        case .info:
-            InfoScreenView(viewModel: .init())
-        }
+            switch currentPage {
+            case .home:
+                HomeView(viewModel: .init(coordinator: self))
+            case .info:
+                InfoScreenView(viewModel: .init())
+            }
+    
     }
+    
+    func switchTo(page: HomePage) {
+           currentPage = page
+       }
     
     func push(page: HomePage) {
         path.append(page)
     }
+ 
 }
 
 

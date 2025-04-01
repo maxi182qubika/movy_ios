@@ -19,7 +19,7 @@ class HomeViewModel: ObservableObject {
     }
 
     func openInfo() {
-        coordinator.push(page: .info)
+        coordinator.switchTo(page: .info)
     }
     
     func loadMovies() {

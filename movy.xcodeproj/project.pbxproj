@@ -61,6 +61,8 @@
 		EC77C4E22D99CB6C00890FA4 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC77C4E12D99CB6B00890FA4 /* Movie.swift */; };
 		EC77C4E42D9B1BB100890FA4 /* MovieSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC77C4E32D9B1BB100890FA4 /* MovieSection.swift */; };
 		EC77C4E62D9B1BF500890FA4 /* MovieCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC77C4E52D9B1BF500890FA4 /* MovieCard.swift */; };
+		EC77C4E82D9B3C7700890FA4 /* MovieDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC77C4E72D9B3C7700890FA4 /* MovieDetailView.swift */; };
+		EC77C4EA2D9B3CB600890FA4 /* MovieDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC77C4E92D9B3CB600890FA4 /* MovieDetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -119,6 +121,8 @@
 		EC77C4E12D99CB6B00890FA4 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		EC77C4E32D9B1BB100890FA4 /* MovieSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSection.swift; sourceTree = "<group>"; };
 		EC77C4E52D9B1BF500890FA4 /* MovieCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCard.swift; sourceTree = "<group>"; };
+		EC77C4E72D9B3C7700890FA4 /* MovieDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailView.swift; sourceTree = "<group>"; };
+		EC77C4E92D9B3CB600890FA4 /* MovieDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -454,6 +458,7 @@
 				EC77C4AC2D94783700890FA4 /* HomeView.swift */,
 				EC77C4E32D9B1BB100890FA4 /* MovieSection.swift */,
 				EC77C4E52D9B1BF500890FA4 /* MovieCard.swift */,
+				EC77C4E72D9B3C7700890FA4 /* MovieDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -463,6 +468,7 @@
 			children = (
 				EC77C4C92D95D7B400890FA4 /* InfoViewModel.swift */,
 				EC77C4D92D99C31C00890FA4 /* HomeViewModel.swift */,
+				EC77C4E92D9B3CB600890FA4 /* MovieDetailViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -662,10 +668,12 @@
 				30095EEC2D7E34CA00A2DB10 /* OnboardingStepFifthViewModel.swift in Sources */,
 				EC77C48D2D6E462800890FA4 /* PlanPriceView.swift in Sources */,
 				EC77C4E02D99C3F800890FA4 /* SearchViewModel.swift in Sources */,
+				EC77C4E82D9B3C7700890FA4 /* MovieDetailView.swift in Sources */,
 				EC77C4752D68BC1200890FA4 /* movyApp.swift in Sources */,
 				EC77C4DC2D99C39F00890FA4 /* ListViewModel.swift in Sources */,
 				EC77C4A52D91E31600890FA4 /* SignupViewModel.swift in Sources */,
 				EC77C4922D6F91D700890FA4 /* TermsTextView.swift in Sources */,
+				EC77C4EA2D9B3CB600890FA4 /* MovieDetailViewModel.swift in Sources */,
 				EC77C4DE2D99C3C900890FA4 /* ProfileViewModel.swift in Sources */,
 				EC77C4E62D9B1BF500890FA4 /* MovieCard.swift in Sources */,
 				30095EEF2D7E380A00A2DB10 /* OnboardingStepFourthViewModel.swift in Sources */,
