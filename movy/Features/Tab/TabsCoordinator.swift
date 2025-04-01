@@ -20,7 +20,9 @@ class TabsCoordinator: ObservableObject {
     func view(for tab: Tab) -> some View {
         switch tab {
         case .home:
-            return AnyView(homeCoordinator.build(page: .home))
+            return AnyView(
+              HomeNavigationView(coordinator: homeCoordinator)
+            )
                 .tag(TabsCoordinator.Tab.home)
                 .tabItem {
                     Label("Home", systemImage: "house")
@@ -46,44 +48,3 @@ class TabsCoordinator: ObservableObject {
         }
     }
 }
-
-class HomeCoordinator: ObservableObject {
-    @Published var currentPage: HomePage = .home
-
-    @Published var path: NavigationPath = NavigationPath()
- 
-    enum HomePage {
-        case home
-        case info
-    }
-    
-    init(
-         path: NavigationPath = .init()
-    ) {
-        self.path = path
-    }
-    
-    @ViewBuilder
-    func build(page: HomePage) -> some View {
-            switch currentPage {
-            case .home:
-                HomeView(viewModel: .init(coordinator: self))
-            case .info:
-                InfoScreenView(viewModel: .init())
-            }
-    
-    }
-    
-    func switchTo(page: HomePage) {
-           currentPage = page
-       }
-    
-    func push(page: HomePage) {
-        path.append(page)
-    }
- 
-}
-
-
-// MARK: - CommonCoordinator
-

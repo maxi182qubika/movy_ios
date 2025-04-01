@@ -75,15 +75,21 @@ struct HomeView: View {
             .ignoresSafeArea()
             
             VStack(alignment: .leading) {
-                MovieSection(title: "My List", movies: viewModel.movies, onMoviePress: { id in
-                    print(id)
-                })
-                MovieSection(title: "Trending Now", movies: viewModel.movies, onMoviePress: { id in
-                    print(id)
-                })
-                MovieSection(title: "Recently Added", movies: viewModel.movies, onMoviePress: { id in
-                    print(id)
-                })
+                MovieSection(
+                  title: "My List",
+                  movies: viewModel.movies,
+                  onMoviePress: viewModel.showMovieDetail
+                )
+                MovieSection(
+                  title: "Trending Now",
+                  movies: viewModel.movies,
+                  onMoviePress: viewModel.showMovieDetail
+                )
+                MovieSection(
+                  title: "Recently Added",
+                  movies: viewModel.movies,
+                  onMoviePress: viewModel.showMovieDetail
+                )
             }
             .padding(.horizontal, 10)
             .background(Color.black)

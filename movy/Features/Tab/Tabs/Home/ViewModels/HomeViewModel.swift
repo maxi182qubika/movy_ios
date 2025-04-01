@@ -19,11 +19,15 @@ class HomeViewModel: ObservableObject {
     }
 
     func openInfo() {
-        coordinator.switchTo(page: .info)
+        coordinator.push(page: .info)
     }
     
     func loadMovies() {
         movies = Movie.MoviesMocked()
+    }
+  
+    func showMovieDetail(id: UUID) {
+      coordinator.push(page: .movieDetail(id: id))
     }
 
     // MARK: Private

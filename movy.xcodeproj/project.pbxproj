@@ -29,6 +29,8 @@
 		30095F182D7E4AC200A2DB10 /* PlanFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30095F172D7E4ABF00A2DB10 /* PlanFeature.swift */; };
 		30095F1A2D7E4AD700A2DB10 /* PlanAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30095F192D7E4AD200A2DB10 /* PlanAttributes.swift */; };
 		30095F1C2D7E4AEC00A2DB10 /* PlanType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30095F1B2D7E4AEA00A2DB10 /* PlanType.swift */; };
+		304FBD3A2D9C31B00043088B /* HomeNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304FBD392D9C31A80043088B /* HomeNavigationView.swift */; };
+		304FBD3C2D9C31D00043088B /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304FBD3B2D9C31CB0043088B /* HomeCoordinator.swift */; };
 		EC77C4752D68BC1200890FA4 /* movyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC77C4742D68BC1200890FA4 /* movyApp.swift */; };
 		EC77C4792D68BC1400890FA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC77C4782D68BC1400890FA4 /* Assets.xcassets */; };
 		EC77C47C2D68BC1400890FA4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC77C47B2D68BC1400890FA4 /* Preview Assets.xcassets */; };
@@ -88,6 +90,8 @@
 		30095F172D7E4ABF00A2DB10 /* PlanFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanFeature.swift; sourceTree = "<group>"; };
 		30095F192D7E4AD200A2DB10 /* PlanAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanAttributes.swift; sourceTree = "<group>"; };
 		30095F1B2D7E4AEA00A2DB10 /* PlanType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanType.swift; sourceTree = "<group>"; };
+		304FBD392D9C31A80043088B /* HomeNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNavigationView.swift; sourceTree = "<group>"; };
+		304FBD3B2D9C31CB0043088B /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		EC77C4712D68BC1200890FA4 /* movy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = movy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC77C4742D68BC1200890FA4 /* movyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = movyApp.swift; sourceTree = "<group>"; };
 		EC77C4782D68BC1400890FA4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -447,6 +451,8 @@
 			children = (
 				EC77C4CE2D99BFD200890FA4 /* ViewModels */,
 				EC77C4CD2D99BFC900890FA4 /* Views */,
+				304FBD392D9C31A80043088B /* HomeNavigationView.swift */,
+				304FBD3B2D9C31CB0043088B /* HomeCoordinator.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -634,6 +640,7 @@
 				EC77C4E42D9B1BB100890FA4 /* MovieSection.swift in Sources */,
 				EC77C49D2D8F414300890FA4 /* RoundedTextField.swift in Sources */,
 				EC77C4DA2D99C31C00890FA4 /* HomeViewModel.swift in Sources */,
+				304FBD3C2D9C31D00043088B /* HomeCoordinator.swift in Sources */,
 				EC77C4E22D99CB6C00890FA4 /* Movie.swift in Sources */,
 				30095F1A2D7E4AD700A2DB10 /* PlanAttributes.swift in Sources */,
 				EC77C4832D68BC4D00890FA4 /* OnboardingStepOneView.swift in Sources */,
@@ -668,6 +675,7 @@
 				30095EEC2D7E34CA00A2DB10 /* OnboardingStepFifthViewModel.swift in Sources */,
 				EC77C48D2D6E462800890FA4 /* PlanPriceView.swift in Sources */,
 				EC77C4E02D99C3F800890FA4 /* SearchViewModel.swift in Sources */,
+				304FBD3A2D9C31B00043088B /* HomeNavigationView.swift in Sources */,
 				EC77C4E82D9B3C7700890FA4 /* MovieDetailView.swift in Sources */,
 				EC77C4752D68BC1200890FA4 /* movyApp.swift in Sources */,
 				EC77C4DC2D99C39F00890FA4 /* ListViewModel.swift in Sources */,
