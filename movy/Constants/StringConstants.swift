@@ -44,7 +44,7 @@ struct StringConstants {
         }
         
         struct StepSixth {
-            static let btnContinue = "CONTINUAR"
+            static let btnContinue = "INICIAR MEMBRESIA"
             static let step = "PASO 6 DE 6"
         }
         

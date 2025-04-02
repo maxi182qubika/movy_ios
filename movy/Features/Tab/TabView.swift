@@ -19,7 +19,7 @@ struct MovyTabView: View {
                     .tag(tab)
                     .tabItem {
                         tabLabel(for: tab)
-                    }.background(Color.black.edgesIgnoringSafeArea(.all))
+                    }
             }
         }
     }

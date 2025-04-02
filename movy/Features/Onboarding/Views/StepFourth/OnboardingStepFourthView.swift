@@ -16,16 +16,16 @@ struct OnboardingStepFourthView: View {
             
             Text("Suscríbite para que comiences tu mes gratis")
                 .font(.system(size: 24, weight: .bold))
-                .foregroundColor(.black)
+                .foregroundColor(Color.customTextPrimary)
             
             Text("¡Dos pasos más y listo!")
                 .font(.system(size: 16, weight: .regular))
-                .foregroundColor(.black)
+                .foregroundColor(Color.customTextPrimary)
                 .padding(.top, 20)
             
             Text("Crea tu cuenta.")
                 .font(.system(size: 18, weight: .bold))
-                .foregroundColor(.black)
+                .foregroundColor(Color.customTextPrimary)
             
         }
         .padding(.top, 60)
@@ -37,7 +37,7 @@ struct OnboardingStepFourthView: View {
             stepHeader
              
             VStack(alignment: .leading) {
-                RoundedTextField(placeholder: "Email", text: $viewModel.username)
+                RoundedTextField(placeholder: "Email", text: $viewModel.username, isPasswordVisible: $viewModel.isPasswordVisible)
                     .textInputAutocapitalization(.never)
                 
                 if let emailError = viewModel.emailError {
@@ -48,7 +48,7 @@ struct OnboardingStepFourthView: View {
                         .padding(.horizontal, 24)
                 }
                 
-                RoundedTextField(placeholder: "Contraseña", text: $viewModel.password, isSecure: true)
+                RoundedTextField(placeholder: "Contraseña", text: $viewModel.password, isSecure: true, isPasswordVisible: $viewModel.isPasswordVisible)
                     .autocapitalization(.none)
                     .textContentType(.password)
                     .keyboardType(.default)

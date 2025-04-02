@@ -4,8 +4,7 @@ import SwiftUI
 
 struct OnboardingStepThirdView: View {
 
-    @State private var devices = ["ic_mac", "ic_imac", "ic_ipad", "ic_iphone"]
-    @State private var text: String = ""
+   private var devices = ["ic_mac", "ic_imac", "ic_ipad", "ic_iphone"]
 
     init(viewModel: OnboardingStepThirdViewModel) {
         self.viewModel = viewModel
@@ -19,10 +18,13 @@ struct OnboardingStepThirdView: View {
             HStack {
                 ForEach(devices.indices, id: \.self) { index in
                     Image(devices[index])
+                        .foregroundColor(.primary)
                 }
             }
             Text(viewModel.title)
+                .foregroundColor(Color.customTextPrimary)
             Text(StringConstants.Onboarding.StepThird.title)
+                .foregroundColor(Color.customTextPrimary)
                 .bold()
             Text(StringConstants.Onboarding.StepThird.description)
                 .padding(.bottom, 60)

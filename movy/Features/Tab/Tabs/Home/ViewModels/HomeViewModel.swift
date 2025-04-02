@@ -15,7 +15,6 @@ class HomeViewModel: ObservableObject {
  
     init(coordinator: HomeCoordinator) {
         self.coordinator = coordinator
-        loadMovies() 
     }
 
     func openInfo() {

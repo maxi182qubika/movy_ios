@@ -18,7 +18,7 @@ struct LoginView: View {
             Text("Login")
                 .frame(maxWidth: .infinity, alignment: .center)
             
-            RoundedTextField(placeholder: "Email", text: $viewModel.username)
+            RoundedTextField(placeholder: "Email", text: $viewModel.username, isPasswordVisible: $viewModel.isPasswordVisible)
                 .textInputAutocapitalization(.never)
 
             if let emailError = viewModel.emailError {
@@ -29,21 +29,11 @@ struct LoginView: View {
                                 .padding(.horizontal, 24)
                         }
             
-            RoundedTextField(placeholder: "Contraseña", text: $viewModel.password, isSecure: true)
+            RoundedTextField(placeholder: "Contraseña", text: $viewModel.password, isSecure: true, isPasswordVisible: $viewModel.isPasswordVisible)
                    .autocapitalization(.none)
                    .textContentType(.password)
                    .keyboardType(.default)
-
- 
-            Button(action: {
-                viewModel.onBack()
-            }) {
-                Text("Create Account")
-                    .font(.system(size: 14, weight: .regular))
-                    .foregroundColor(Color.customBlueLight)
-                    .frame(maxWidth: .infinity, alignment: .center)
-            }
-            
+            backButton
             Spacer()
             if let loginError = viewModel.loginError {
                             Text(loginError)
@@ -59,6 +49,15 @@ struct LoginView: View {
             
          
         }.padding(.horizontal)
+    }
+    
+    private var backButton: some View {
+       Button(action: viewModel.onBack) {
+                    Text("Create Account")
+                        .font(.system(size: 14, weight: .regular))
+                        .foregroundColor(Color.customBlueLight)
+                        .frame(maxWidth: .infinity, alignment: .center)
+                }
     }
     
     @ObservedObject private var viewModel: LoginViewModel

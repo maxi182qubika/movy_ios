@@ -94,9 +94,9 @@ class OnboardingCoordinator: ObservableObject {
         case .step4:
             OnboardingStepFourthView(viewModel: .init(coordinator: self, page: page))
         case .step5:
-            OnboardingStepFifthView(viewModel: .init(coordinator: self))
+            OnboardingStepFifthView(viewModel: .init(coordinator: self, page: page))
         case .step6:
-            OnboardingStepSixthView(viewModel: .init(coordinator: self))
+            OnboardingStepSixthView(viewModel: .init(coordinator: self, page: page))
         case .signUp:
             SignupView(viewModel: .init(coordinator: self))
         }

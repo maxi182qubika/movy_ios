@@ -12,4 +12,10 @@ struct ValidationUtils {
         let emailRegex = #"^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$"#
         return NSPredicate(format: "SELF MATCHES[c] %@", emailRegex).evaluate(with: email)
     }
+    
+    static func isValidCvv(_ cvv: String) -> Bool {
+        let trimmed = cvv.trimmingCharacters(in: .whitespacesAndNewlines)
+        let regex = "^[0-9]{3,4}$"
+        return NSPredicate(format: "SELF MATCHES %@", regex).evaluate(with: trimmed)
+    }
 }

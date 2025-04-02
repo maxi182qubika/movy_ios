@@ -10,7 +10,7 @@ class OnboardingStepFourthViewModel: ObservableObject {
     }
     @Published var password: String = ""
     @Published var emailError: String?
- 
+    @Published var isPasswordVisible: Bool = false
     
     let title: String
 

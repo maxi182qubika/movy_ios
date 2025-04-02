@@ -11,7 +11,7 @@ struct RoundedTextField: View {
     var placeholder: String
     @Binding var text: String
     var isSecure: Bool = false
-    @State private var isPasswordVisible: Bool = false
+    @Binding var isPasswordVisible: Bool
 
     var body: some View {
         HStack {
@@ -38,7 +38,8 @@ struct RoundedTextField: View {
 struct RoundedTextField_Previews: PreviewProvider {
     static var previews: some View {
         @State var text = ""
-        RoundedTextField(placeholder: "Enter username", text: $text)
+        @State var isPasswordVisible = true
+        RoundedTextField(placeholder: "Enter username", text: $text, isPasswordVisible: $isPasswordVisible)
             .padding()
     }
 }

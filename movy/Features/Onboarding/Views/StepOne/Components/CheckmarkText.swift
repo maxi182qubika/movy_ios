@@ -13,7 +13,7 @@ struct CheckmarkText: View {
             
             Text(text)
                 .font(.system(size: 16))
-                .foregroundColor(.black)
+                .foregroundColor(Color.customTextPrimary)
         }
     }
 }

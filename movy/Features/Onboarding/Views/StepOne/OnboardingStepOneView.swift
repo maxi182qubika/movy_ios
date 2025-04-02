@@ -59,12 +59,13 @@ struct OnboardingStepOneView: View {
     private var title: some View {
         Text(StringConstants.Onboarding.StepOne.step)
             .font(.system(size: 14, weight: .bold))
+            .foregroundColor(Color.customTextPrimary)
     }
     
     private var subtitle: some View {
         Text(StringConstants.Onboarding.StepOne.selectPlan)
             .font(.system(size: 22, weight: .bold))
-            .foregroundColor(.black)
+            .foregroundColor(Color.customTextPrimary)
     }
     
     private var benefits: some View {

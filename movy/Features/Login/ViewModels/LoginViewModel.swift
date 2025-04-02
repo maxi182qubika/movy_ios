@@ -10,6 +10,8 @@ class LoginViewModel: ObservableObject {
       @Published var password: String = ""
       @Published var emailError: String?
       @Published var loginError: String?
+      @Published var isPasswordVisible: Bool = false
+
 
     private let authManager = AuthManager.shared
     let onBack: () -> Void
