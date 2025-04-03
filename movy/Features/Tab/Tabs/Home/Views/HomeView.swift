@@ -87,7 +87,9 @@ struct HomeView: View {
             .background(Color.black)
             .ignoresSafeArea(.all, edges: .top)
             .onAppear {
-                viewModel.loadMovies()
+                Task {
+                    await viewModel.loadMovies()
+                }
             }
     }
     

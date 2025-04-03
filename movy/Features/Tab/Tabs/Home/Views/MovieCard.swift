@@ -13,15 +13,19 @@ struct MovieCard: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            Image(movie.imageName)
-                .resizable()
-                .scaledToFit()
-                .frame(width: 86, height: 147)
-                .cornerRadius(4)
-                .onTapGesture {
-                    onMoviePress?(movie.id)
-                }
+            AsyncImage(url: URL(string: movie.imageName), scale: 3) { image in
+                image
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 86, height: 147)
+                    .cornerRadius(4)
+            } placeholder: {
+                ProgressView()
+            }
+            .onTapGesture {
+                onMoviePress?(movie.id)
+            }
+            
         }
-        
     }
 }
