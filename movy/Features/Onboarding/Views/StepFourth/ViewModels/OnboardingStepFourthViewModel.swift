@@ -5,11 +5,26 @@ import SwiftUI
 class OnboardingStepFourthViewModel: ObservableObject {
     
     // MARK: Public
+    @Published var username: String = "" {
+        didSet { validateEmail() }
+    }
+    @Published var password: String = ""
+    @Published var emailError: String?
+    @Published var isPasswordVisible: Bool = false
     
-    let title = "Step 4"
+    let title: String
 
-    init(coordinator: OnboardingCoordinator) {
+    init(coordinator: OnboardingCoordinator, page: OnboardingPage) {
         self.coordinator = coordinator
+        self.title = page.name
+    }
+    
+    private func validateEmail() {
+        if username.isEmpty {
+            emailError = nil
+        } else {
+            emailError = ValidationUtils.isValidEmail(username) ? nil : "Invalid email"
+        }
     }
     
     func continueToNextStep() {
@@ -28,6 +43,6 @@ class OnboardingStepFourthViewModel: ObservableObject {
     // MARK: Static
     
     static func mock() -> OnboardingStepFourthViewModel {
-        OnboardingStepFourthViewModel(coordinator: .init())
+        OnboardingStepFourthViewModel(coordinator: .init(), page: .step4)
     }
 }

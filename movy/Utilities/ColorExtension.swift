@@ -11,6 +11,8 @@ import Foundation
 extension Color {
     static let customGrayLight = Color("ColorGrayLight")
     static let customBlueLight = Color("ColorBlueLight")
+    static let customTabBgColor = Color("ColorTabBg")
+    static let customTextPrimary = Color("MovyTextPrimary")
 }
 
 

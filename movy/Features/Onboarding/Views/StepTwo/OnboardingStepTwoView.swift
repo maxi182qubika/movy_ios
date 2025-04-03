@@ -52,14 +52,15 @@ struct OnboardingStepTwoView: View {
         VStack(alignment: .leading, spacing: 5) {
             Text("PASO 2 DE 3")
                 .font(.system(size: 14, weight: .bold))
+                .foregroundColor(Color.customTextPrimary)
             
             Text("Selecciona el plan ideal para ti")
                 .font(.system(size: 24, weight: .bold))
-                .foregroundColor(.black)
+                .foregroundColor(Color.customTextPrimary)
             
             Text("Cambia a un plan inferior  o superior en cualquier momento")
                 .font(.system(size: 16, weight: .regular))
-                .foregroundColor(.black)
+                .foregroundColor(Color.customTextPrimary)
                 .padding(.top, 20)
             
         }
@@ -69,7 +70,7 @@ struct OnboardingStepTwoView: View {
     private var monthlyPlanLabel: some View {
         Text("Precio mensual cuando se termine el mes gratis.")
             .font(.system(size: 16, weight: .regular))
-            .foregroundColor(.black)
+            .foregroundColor(Color.customTextPrimary)
             .frame(maxWidth: 230, alignment: .center)
             .multilineTextAlignment(.center)
     }

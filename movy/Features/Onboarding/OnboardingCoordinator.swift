@@ -1,7 +1,19 @@
 import SwiftUI
 
 enum OnboardingPage: Hashable {
-    case step1, step2, step3, step4, step5, step6
+    case step1, step2, step3, step4, step5, step6, signUp
+    
+    var name: String {
+        switch self {
+        case .step1: return StringConstants.Onboarding.StepOne.step
+        case .step2: return StringConstants.Onboarding.StepTwo.step
+        case .step3: return StringConstants.Onboarding.StepThird.step
+        case .step4: return StringConstants.Onboarding.StepFourth.step
+        case .step5: return StringConstants.Onboarding.StepFifth.step
+        case .step6: return StringConstants.Onboarding.StepSixth.step
+        case .signUp: return StringConstants.Onboarding.Signup.step
+        }
+    }
 }
 
 enum OnboardingSheet: String, Identifiable {
@@ -27,17 +39,19 @@ class OnboardingCoordinator: ObservableObject {
     @Published var sheet: OnboardingSheet?
     @Published var fullScreenCover: OnboardingFullScreenCover?
     let showLogin: () -> Void
-
+    let showSignup: () -> Void
     init(
         path: NavigationPath = .init(),
         sheet: OnboardingSheet? = nil,
         fullScreenCover: OnboardingFullScreenCover? = nil,
-        showLogin: @escaping () -> Void = {}
+        showLogin: @escaping () -> Void = {},
+        showSignup: @escaping () -> Void = {}
     ) {
         self.path = path
         self.sheet = sheet
         self.fullScreenCover = fullScreenCover
         self.showLogin = showLogin
+        self.showSignup = showSignup
     }
     
     func push(page: OnboardingPage) {
@@ -76,13 +90,15 @@ class OnboardingCoordinator: ObservableObject {
         case .step2:
             OnboardingStepTwoView(viewModel: .init(coordinator: self))
         case .step3:
-            OnboardingStepThirdView(viewModel: .init(coordinator: self))
+            OnboardingStepThirdView(viewModel: .init(coordinator: self, page: page))
         case .step4:
-            OnboardingStepFourthView(viewModel: .init(coordinator: self))
+            OnboardingStepFourthView(viewModel: .init(coordinator: self, page: page))
         case .step5:
-            OnboardingStepFifthView(viewModel: .init(coordinator: self))
+            OnboardingStepFifthView(viewModel: .init(coordinator: self, page: page))
         case .step6:
-            OnboardingStepSixthView(viewModel: .init(coordinator: self))
+            OnboardingStepSixthView(viewModel: .init(coordinator: self, page: page))
+        case .signUp:
+            SignupView(viewModel: .init(coordinator: self))
         }
     }
     
