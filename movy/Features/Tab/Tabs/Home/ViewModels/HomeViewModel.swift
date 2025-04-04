@@ -11,13 +11,14 @@ import SwiftUI
 class HomeViewModel: ObservableObject {
 
     // MARK: Public
-    @Published var movies: [Movie] = []
+    @Published var movies: AsyncState<[Movie]> = .initial
+    private var loadedMovies: [Movie]? = nil
     private let apiClient: APIClientProtocol
-
  
     init(coordinator: HomeCoordinator, apiClient: APIClientProtocol = APIClient.shared) {
         self.coordinator = coordinator
         self.apiClient = apiClient
+        
     }
  
     func openInfo() {
@@ -25,11 +26,14 @@ class HomeViewModel: ObservableObject {
     }
     
     func loadMovies() async {
+    
         do {
             let fetchedCharacters = try await getMarvelCharacters()
             let characterToMovies = fetchedCharacters.map { Movie(from: $0) }
-
-            movies = characterToMovies
+            
+            self.loadedMovies = characterToMovies
+            movies = .loaded(characterToMovies)
+            
             print(characterToMovies)
         } catch {
             print("Failed to fetch movies: \(error)")

@@ -7,15 +7,25 @@
 
 import Foundation
 
-struct Movie: Identifiable, Decodable {
+extension Movie {
+    static let placeholder = Movie(title: "Loading...", imageName: "")
+}
+struct Movie: Identifiable, Decodable, Equatable {
     let id = UUID()
     let title: String
     let imageName: String
+    
+    init(id: UUID = UUID(), title: String, imageName: String) {
+        self.title = title
+        self.imageName = imageName
+    }
     
     init(from character: MarvelCharacter) {
         self.title = character.name
         self.imageName = character.thumbnail.imageURL(withFilename: "portrait_medium")?.absoluteString ?? ""
     }
+    
+    
 
 //    static func MoviesMocked() -> [Movie] { // TODO Load from the api
 //        return [

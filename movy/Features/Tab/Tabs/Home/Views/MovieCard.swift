@@ -6,26 +6,35 @@
 //
 
 import SwiftUI
-
 struct MovieCard: View {
     let movie: Movie
+    let moviesState: AsyncState<[Movie]> 
     var onMoviePress: ((UUID) -> Void)?
     
     var body: some View {
         VStack(alignment: .leading) {
-            AsyncImage(url: URL(string: movie.imageName), scale: 3) { image in
-                image
-                    .resizable()
-                    .scaledToFit()
+            switch moviesState {
+            case .initial, .loading:
+                
+                ShimmerEffectBox()
                     .frame(width: 86, height: 147)
                     .cornerRadius(4)
-            } placeholder: {
-                ProgressView()
+                 
+                
+            case .loaded(let movies):
+                AsyncImage(url: URL(string: movie.imageName), scale: 3) { image in
+                    image
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 86, height: 147)
+                        .cornerRadius(4)
+                } placeholder: {
+                    ProgressView()
+                }
+                .onTapGesture {
+                    onMoviePress?(movie.id)
+                }
             }
-            .onTapGesture {
-                onMoviePress?(movie.id)
-            }
-            
         }
     }
 }
