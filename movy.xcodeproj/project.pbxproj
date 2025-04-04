@@ -68,6 +68,17 @@
 		EC77C4ED2D9CACCC00890FA4 /* PaymentOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC77C4EC2D9CACCC00890FA4 /* PaymentOptionView.swift */; };
 		EC77C4EF2D9CC46F00890FA4 /* BaseTextInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC77C4EE2D9CC46F00890FA4 /* BaseTextInputView.swift */; };
 		EC77C4F12D9CCFA200890FA4 /* SecureCodeTextInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC77C4F02D9CCFA200890FA4 /* SecureCodeTextInputView.swift */; };
+		EC77C4F62D9DD20F00890FA4 /* APIRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC77C4F52D9DD20F00890FA4 /* APIRoute.swift */; };
+		EC77C4F82D9DD38000890FA4 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC77C4F72D9DD38000890FA4 /* APIError.swift */; };
+		EC77C4FC2D9DD6C400890FA4 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC77C4FB2D9DD6C400890FA4 /* ApiClient.swift */; };
+		EC77C4FF2D9DDDC100890FA4 /* MovieRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC77C4FE2D9DDDC100890FA4 /* MovieRepository.swift */; };
+		EC77C5012D9DE50300890FA4 /* ApiClient+Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC77C5002D9DE50300890FA4 /* ApiClient+Movie.swift */; };
+		EC77C5032D9DE6B600890FA4 /* MovieRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC77C5022D9DE6B600890FA4 /* MovieRoute.swift */; };
+		EC77C5062D9E066B00890FA4 /* MarvelResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC77C5052D9E066B00890FA4 /* MarvelResponse.swift */; };
+		EC77C5082D9E070100890FA4 /* MarvelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC77C5072D9E070100890FA4 /* MarvelData.swift */; };
+		EC77C50A2D9E080E00890FA4 /* MarvelCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC77C5092D9E080E00890FA4 /* MarvelCharacter.swift */; };
+		EC77C50E2D9F136B00890FA4 /* ShimmerViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC77C50D2D9F136B00890FA4 /* ShimmerViewModifier.swift */; };
+		EC77C5102D9F3D4500890FA4 /* AsyncState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC77C50F2D9F3D4500890FA4 /* AsyncState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -133,6 +144,17 @@
 		EC77C4EC2D9CACCC00890FA4 /* PaymentOptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentOptionView.swift; sourceTree = "<group>"; };
 		EC77C4EE2D9CC46F00890FA4 /* BaseTextInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTextInputView.swift; sourceTree = "<group>"; };
 		EC77C4F02D9CCFA200890FA4 /* SecureCodeTextInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureCodeTextInputView.swift; sourceTree = "<group>"; };
+		EC77C4F52D9DD20F00890FA4 /* APIRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRoute.swift; sourceTree = "<group>"; };
+		EC77C4F72D9DD38000890FA4 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		EC77C4FB2D9DD6C400890FA4 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		EC77C4FE2D9DDDC100890FA4 /* MovieRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRepository.swift; sourceTree = "<group>"; };
+		EC77C5002D9DE50300890FA4 /* ApiClient+Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ApiClient+Movie.swift"; sourceTree = "<group>"; };
+		EC77C5022D9DE6B600890FA4 /* MovieRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRoute.swift; sourceTree = "<group>"; };
+		EC77C5052D9E066B00890FA4 /* MarvelResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelResponse.swift; sourceTree = "<group>"; };
+		EC77C5072D9E070100890FA4 /* MarvelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelData.swift; sourceTree = "<group>"; };
+		EC77C5092D9E080E00890FA4 /* MarvelCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelCharacter.swift; sourceTree = "<group>"; };
+		EC77C50D2D9F136B00890FA4 /* ShimmerViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShimmerViewModifier.swift; sourceTree = "<group>"; };
+		EC77C50F2D9F3D4500890FA4 /* AsyncState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -349,6 +371,7 @@
 				EC77C4EC2D9CACCC00890FA4 /* PaymentOptionView.swift */,
 				EC77C4EE2D9CC46F00890FA4 /* BaseTextInputView.swift */,
 				EC77C4F02D9CCFA200890FA4 /* SecureCodeTextInputView.swift */,
+				EC77C50D2D9F136B00890FA4 /* ShimmerViewModifier.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -397,6 +420,9 @@
 		EC77C4732D68BC1200890FA4 /* movy */ = {
 			isa = PBXGroup;
 			children = (
+				EC77C5042D9E05E000890FA4 /* Entities */,
+				EC77C4FD2D9DDACE00890FA4 /* Repositories */,
+				EC77C4F42D9DD1DC00890FA4 /* Networking */,
 				30095ED62D7E2FC800A2DB10 /* Models */,
 				30095ED52D7E2FC400A2DB10 /* Resources */,
 				30095ED42D7E2FAC00A2DB10 /* Components */,
@@ -434,6 +460,7 @@
 				EC77C49A2D713B4100890FA4 /* ColorExtension.swift */,
 				EC77C4882D68E91300890FA4 /* TriangleShape.swift */,
 				EC77C4A62D93196C00890FA4 /* ValidationUtils.swift */,
+				EC77C50F2D9F3D4500890FA4 /* AsyncState.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -574,6 +601,36 @@
 			path = Tabs;
 			sourceTree = "<group>";
 		};
+		EC77C4F42D9DD1DC00890FA4 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				EC77C4F52D9DD20F00890FA4 /* APIRoute.swift */,
+				EC77C4F72D9DD38000890FA4 /* APIError.swift */,
+				EC77C4FB2D9DD6C400890FA4 /* ApiClient.swift */,
+				EC77C5002D9DE50300890FA4 /* ApiClient+Movie.swift */,
+				EC77C5022D9DE6B600890FA4 /* MovieRoute.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		EC77C4FD2D9DDACE00890FA4 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				EC77C4FE2D9DDDC100890FA4 /* MovieRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		EC77C5042D9E05E000890FA4 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				EC77C5052D9E066B00890FA4 /* MarvelResponse.swift */,
+				EC77C5072D9E070100890FA4 /* MarvelData.swift */,
+				EC77C5092D9E080E00890FA4 /* MarvelCharacter.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -644,6 +701,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC77C5102D9F3D4500890FA4 /* AsyncState.swift in Sources */,
+				EC77C5082D9E070100890FA4 /* MarvelData.swift in Sources */,
 				EC77C4ED2D9CACCC00890FA4 /* PaymentOptionView.swift in Sources */,
 				EC77C4A22D91E2F500890FA4 /* SignupView.swift in Sources */,
 				30095EFD2D7E3D9400A2DB10 /* OnboardingStepTwoViewModel.swift in Sources */,
@@ -651,6 +710,7 @@
 				EC77C49D2D8F414300890FA4 /* RoundedTextField.swift in Sources */,
 				EC77C4DA2D99C31C00890FA4 /* HomeViewModel.swift in Sources */,
 				304FBD3C2D9C31D00043088B /* HomeCoordinator.swift in Sources */,
+				EC77C50A2D9E080E00890FA4 /* MarvelCharacter.swift in Sources */,
 				EC77C4E22D99CB6C00890FA4 /* Movie.swift in Sources */,
 				30095F1A2D7E4AD700A2DB10 /* PlanAttributes.swift in Sources */,
 				EC77C4832D68BC4D00890FA4 /* OnboardingStepOneView.swift in Sources */,
@@ -663,21 +723,25 @@
 				30095EF82D7E3A8300A2DB10 /* CheckmarkText.swift in Sources */,
 				30095F162D7E48AA00A2DB10 /* OnboardingHeader.swift in Sources */,
 				30095EFF2D7E402500A2DB10 /* OnboardingView.swift in Sources */,
+				EC77C4F82D9DD38000890FA4 /* APIError.swift in Sources */,
 				30095EF22D7E390F00A2DB10 /* OnboardingStepOneViewModel.swift in Sources */,
 				EC77C4AB2D94710D00890FA4 /* TabsCoordinator.swift in Sources */,
 				EC77C4C72D95D79700890FA4 /* InfoScreenView.swift in Sources */,
 				30095ED82D7E332800A2DB10 /* OnboardingStepThirdView.swift in Sources */,
+				EC77C5032D9DE6B600890FA4 /* MovieRoute.swift in Sources */,
 				EC77C4CA2D95D7B400890FA4 /* InfoViewModel.swift in Sources */,
 				EC77C4B12D947E2100890FA4 /* SearchView.swift in Sources */,
 				30095F1C2D7E4AEC00A2DB10 /* PlanType.swift in Sources */,
 				EC77C4872D68E57600890FA4 /* PlanComponentView.swift in Sources */,
 				30095F072D7E44BE00A2DB10 /* LoginView.swift in Sources */,
+				EC77C50E2D9F136B00890FA4 /* ShimmerViewModifier.swift in Sources */,
 				30095EE92D7E343B00A2DB10 /* OnboardingStepSixthViewModel.swift in Sources */,
 				EC77C49B2D713B4100890FA4 /* ColorExtension.swift in Sources */,
 				EC77C48F2D6E478C00890FA4 /* PlanOption.swift in Sources */,
 				EC77C4A72D93196C00890FA4 /* ValidationUtils.swift in Sources */,
 				30095F032D7E448C00A2DB10 /* LoginViewModel.swift in Sources */,
 				EC77C4B92D94841A00890FA4 /* IconTextView.swift in Sources */,
+				EC77C4F62D9DD20F00890FA4 /* APIRoute.swift in Sources */,
 				30095F0F2D7E472900A2DB10 /* AppEntryCoordinator.swift in Sources */,
 				30095EFA2D7E3C8D00A2DB10 /* OnboardingCoordinator.swift in Sources */,
 				EC77C4BB2D94D4B300890FA4 /* ProfileView.swift in Sources */,
@@ -689,16 +753,20 @@
 				304FBD3A2D9C31B00043088B /* HomeNavigationView.swift in Sources */,
 				EC77C4E82D9B3C7700890FA4 /* MovieDetailView.swift in Sources */,
 				EC77C4752D68BC1200890FA4 /* movyApp.swift in Sources */,
+				EC77C4FF2D9DDDC100890FA4 /* MovieRepository.swift in Sources */,
 				EC77C4DC2D99C39F00890FA4 /* ListViewModel.swift in Sources */,
 				EC77C4A52D91E31600890FA4 /* SignupViewModel.swift in Sources */,
 				EC77C4922D6F91D700890FA4 /* TermsTextView.swift in Sources */,
 				EC77C4EF2D9CC46F00890FA4 /* BaseTextInputView.swift in Sources */,
+				EC77C5012D9DE50300890FA4 /* ApiClient+Movie.swift in Sources */,
 				EC77C4EA2D9B3CB600890FA4 /* MovieDetailViewModel.swift in Sources */,
 				EC77C4DE2D99C3C900890FA4 /* ProfileViewModel.swift in Sources */,
 				EC77C4E62D9B1BF500890FA4 /* MovieCard.swift in Sources */,
 				30095EEF2D7E380A00A2DB10 /* OnboardingStepFourthViewModel.swift in Sources */,
+				EC77C4FC2D9DD6C400890FA4 /* ApiClient.swift in Sources */,
 				EC77C4952D7129CE00890FA4 /* StringConstants.swift in Sources */,
 				EC77C4982D71389300890FA4 /* RoundedButtonComp.swift in Sources */,
+				EC77C5062D9E066B00890FA4 /* MarvelResponse.swift in Sources */,
 				EC77C4AD2D94783700890FA4 /* HomeView.swift in Sources */,
 				30095EF52D7E3A2400A2DB10 /* OnboardingStepThirdViewModel.swift in Sources */,
 				30095F0A2D7E469900A2DB10 /* TabView.swift in Sources */,
