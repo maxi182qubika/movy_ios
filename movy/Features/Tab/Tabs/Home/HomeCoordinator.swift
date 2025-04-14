@@ -13,6 +13,8 @@ class HomeCoordinator: ObservableObject {
   @Published var sheet: OnboardingSheet?
   @Published var fullScreenCover: OnboardingFullScreenCover?
    
+  lazy var homeViewModel: HomeViewModel = HomeViewModel(coordinator: self)
+
    init(
         path: NavigationPath = .init()
    ) {
@@ -23,7 +25,7 @@ class HomeCoordinator: ObservableObject {
    func build(page: HomePage) -> some View {
        switch page {
        case .home:
-           HomeView(viewModel: .init(coordinator: self))
+           HomeView(viewModel: homeViewModel)
        case .info:
            InfoScreenView(viewModel: .init())
        case .movieDetail(let id):

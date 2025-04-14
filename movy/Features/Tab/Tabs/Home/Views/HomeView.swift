@@ -67,17 +67,17 @@ struct HomeView: View {
                 VStack(alignment: .leading, spacing: 20) {
                     MovieSection(
                         title: "My List",
-                        movies: viewModel.movies,
+                        moviesState: viewModel.movies,
                         onMoviePress: viewModel.showMovieDetail
                     )
                     MovieSection(
                         title: "Trending Now",
-                        movies: viewModel.movies,
+                        moviesState: viewModel.movies,
                         onMoviePress: viewModel.showMovieDetail
                     )
                     MovieSection(
                         title: "Recently Added",
-                        movies: viewModel.movies,
+                        moviesState: viewModel.movies,
                         onMoviePress: viewModel.showMovieDetail
                     )
                 }
@@ -87,7 +87,9 @@ struct HomeView: View {
             .background(Color.black)
             .ignoresSafeArea(.all, edges: .top)
             .onAppear {
-                viewModel.loadMovies()
+                Task() {
+                    await viewModel.loadMovies()
+                }
             }
     }
     

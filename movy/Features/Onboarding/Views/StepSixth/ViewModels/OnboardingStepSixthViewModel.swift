@@ -11,14 +11,7 @@ class OnboardingStepSixthViewModel: ObservableObject {
     @Published var emptyText: String = ""
     @Published var cvvError: String?
     
-    @Published var cvv: String = "" {
-        didSet {
-            if cvv.count > 4 { // MARK: esto deberia cortar el largo?
-                cvv = String(cvv.prefix(4))
-            }
-             validateCvv()
-        }
-    }
+    @Published var cvv: String = ""
  
     let title: String
 
@@ -27,12 +20,16 @@ class OnboardingStepSixthViewModel: ObservableObject {
         self.title = page.name
     }
     
-    private func validateCvv() {
+    func validateCvv() {
+      if cvv.count > 4 {
+          cvv = String(cvv.prefix(4))
+      } else {
         if cvv.isEmpty {
             cvvError = nil
         } else {
             cvvError = ValidationUtils.isValidCvv(cvv) ? nil : "Invalid CVV"
         }
+      }
     }
     
     func finishOnboarding() {

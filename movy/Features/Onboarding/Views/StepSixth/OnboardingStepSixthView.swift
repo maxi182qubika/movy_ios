@@ -61,7 +61,14 @@ struct OnboardingStepSixthView: View {
                 .padding(.top, 16)
             BaseTextInputView(text: $viewModel.emptyText, placeholder: "")
                 .padding(.top, 16)
-            SecureCodeTextInputView(text: $viewModel.cvv, placeholder: "Código de seguridad (CVV)", onHelpPress: {})
+            SecureCodeTextInputView(
+              text: $viewModel.cvv,
+              placeholder: "Código de seguridad (CVV)",
+              onHelpPress: {}
+            )
+            .onChange(of: viewModel.cvv) { newValue in
+              viewModel.validateCvv()
+            }
                 .keyboardType(.numberPad)
             
             Text(viewModel.cvvError ?? " ")

@@ -13,6 +13,7 @@ extension Color {
     static let customBlueLight = Color("ColorBlueLight")
     static let customTabBgColor = Color("ColorTabBg")
     static let customTextPrimary = Color("MovyTextPrimary")
+    static let customMovyGradientLight = Color("MovyTextPrimary")
 }
 
 
